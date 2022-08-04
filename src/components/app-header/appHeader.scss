@@ -1,0 +1,37 @@
+header {
+	padding-top: 15pt;
+	margin-left: 70pt;
+}
+.navigation {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	li {
+		margin-right: 40px;
+	}
+	li:nth-child(1)::before {
+		content: url('../../resources/icons/coffee-beans-1.png');
+	}
+}
+h1 {
+	font-size: 40px;
+}
+div  {
+	p {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 15pt;
+		&:nth-child(1) {
+			margin-top: 19pt;
+		}
+	}
+	button {
+		background-color: transparent;
+		color: #fff;
+		cursor: pointer;
+		border: 1px solid #fff;
+		font-size: 14px;
+		padding: 5pt 35pt;
+		border-radius: 3px;
+	}
+}
