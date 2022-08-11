@@ -15,7 +15,7 @@
 		content: url('../../resources/icons/coffee-beans_black.png');
 	}
 
-	li {
-		margin-right: 40px;
+	li:nth-child(2) {
+		margin: 0pt 30pt;
 	}
 }

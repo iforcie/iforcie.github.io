@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('./fontSize.scss');
+@import url('./addBootstrap.scss');
 
 /* Обнуление стилей */
 
@@ -44,7 +46,3 @@ input::-webkit-inner-spin-button {
 
 /* ************ */
 
-.wrapper {
-    margin: 0px auto;
-    max-width: 802px;
-}

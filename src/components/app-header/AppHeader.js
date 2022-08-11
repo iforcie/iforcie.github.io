@@ -12,16 +12,15 @@ class Header extends Component {
 
 	render() {
 		return (
-			<header>
-					<nav>
-						<ul className='navigation'>
-							<li>Coffee house</li>
-							<li>Our Coffee</li>
-							<li>For your pleasure</li>
-						</ul>
-					</nav>
-				</header>
-			
+			<header className="font-8">
+				<nav>
+					<ul className='navigation'>
+						<li>Coffee house</li>
+						<li>Our Coffee</li>
+						<li>For your pleasure</li>
+					</ul>
+				</nav>
+			</header>
 		);
 	}
 }
