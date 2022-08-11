@@ -4,7 +4,7 @@ import logo from '../../resources/icons/coffee-beans_black.svg';
 
 const AppAbout = () => {
 	return (
-		<div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+		<div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin: "60pt"}}>
 			<h2>About us</h2>
 			<div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "17pt"}}>
 				<span style={{border: "1px solid #000", width: "60px", height: "1px"}}></span>
