@@ -1,6 +1,6 @@
 import {Container} from 'react-bootstrap';
 
-import './appAbout.scss';
+import './appAboutCoffee.scss';
 
 import logo from '../../../../resources/icons/coffee-beans_black.svg';
 
