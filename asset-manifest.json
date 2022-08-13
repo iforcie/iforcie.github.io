@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f8f3f51.css",
-    "main.js": "/static/js/main.ca780bd4.js",
+    "main.css": "/static/css/main.9ac37797.css",
+    "main.js": "/static/js/main.6be5a098.js",
     "static/media/paper-1074131_1920.png": "/static/media/paper-1074131_1920.88c602093c7a9c14581c.png",
     "static/media/desk-791178_1920.png": "/static/media/desk-791178_1920.8408a73e874f04a2fed9.png",
+    "static/media/our-coffee.png": "/static/media/our-coffee.77078c9e0edc247e033d.png",
+    "static/media/girl_drink.png": "/static/media/girl_drink.957a3dfb1d9579487476.png",
     "static/media/aromistico.png": "/static/media/aromistico.abb45c1ba257a5364ef1.png",
     "static/media/solimo.png": "/static/media/solimo.25d5ad4a54bdd9afbde4.png",
     "static/media/presto.png": "/static/media/presto.7d9f028b14b6f1708735.png",
     "static/media/coffee-beans_black.svg": "/static/media/coffee-beans_black.bace72a4647a37d9f64225c9f5b1a1e0.svg",
     "index.html": "/index.html",
-    "main.7f8f3f51.css.map": "/static/css/main.7f8f3f51.css.map",
-    "main.ca780bd4.js.map": "/static/js/main.ca780bd4.js.map"
+    "main.9ac37797.css.map": "/static/css/main.9ac37797.css.map",
+    "main.6be5a098.js.map": "/static/js/main.6be5a098.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f8f3f51.css",
-    "static/js/main.ca780bd4.js"
+    "static/css/main.9ac37797.css",
+    "static/js/main.6be5a098.js"
   ]
 }
