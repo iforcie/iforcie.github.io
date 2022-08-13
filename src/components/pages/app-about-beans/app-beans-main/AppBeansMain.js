@@ -5,6 +5,7 @@ import AppBeansHeader from '../app-beans-header/AppBeansHeader';
 import AppBeansAbout from '../app-beans-about/AppBeansAbout';
 import AppBeansSearch from '../app-beans-search/AppBeansSearch';
 import AppBeansFilter from '../app-beans-filter/AppBeansFilter';
+import AppBeansCards from '../app-beans-cards/AppBeansCards';
 
 class AppBeansMain extends Component {
 	render() {
@@ -13,11 +14,13 @@ class AppBeansMain extends Component {
 				<AppBeansHeader />
 				<AppBeansAbout />
 				<Container>
-					<div className="d-flex flex-row justify-content-between">
+					<div className="d-flex flex-column flex-md-row align-items-center justify-content-center my-5">
 						<AppBeansSearch />
+						<span className="mx-4 my-3">Or filter</span>
 						<AppBeansFilter />
 					</div>
 				</Container>
+				<AppBeansCards />
 			</>
 		)
 	}

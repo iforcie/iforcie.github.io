@@ -5,7 +5,7 @@ import logo from '../../../../resources/icons/coffee-beans_black.svg';
 
 const AppBeansAbout = () => {
 	return (
-		<Container className="">
+		<Container>
 			<div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
 				<div>
 					<img src={girlDrink} alt="girl_drink" />
