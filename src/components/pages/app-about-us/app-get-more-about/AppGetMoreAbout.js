@@ -9,10 +9,11 @@ import headerBackground from '../../../../resources/images/backgrounds/desk-7911
 
 class AppGetMoreAbout extends Component {
 	render() {
+		const {changePageType} = this.props;
 		return(
 			<div style={{background: `url(${headerBackground}) 0 0 no-repeat`, backgroundSize: "cover", paddingBottom: "150pt", color: "#fff"}}>
 				<Container fluid>
-					<Header />
+					<Header changePageType={changePageType}/>
 					<Col>
 						<div style={{textAlign: "center", marginTop: "90pt"}}>
 							<h1>Everything You Love About Coffee</h1>

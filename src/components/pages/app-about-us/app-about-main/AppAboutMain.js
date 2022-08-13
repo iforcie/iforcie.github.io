@@ -5,10 +5,15 @@ import AppGetMoreAbout from '../app-get-more-about/AppGetMoreAbout';
 import AppOurBest from '../app-our-best/AppOurBest';
 
 class AppAboutMain extends Component {
+
+	changePageType = (newPageType) => {
+		this.props.changePageType(newPageType);
+	}
+
 	render() {
 		return (
 			<>
-				<AppGetMoreAbout />
+				<AppGetMoreAbout changePageType={this.changePageType} />
 				<AppAboutCoffee />
 				<AppOurBest />
 			</>

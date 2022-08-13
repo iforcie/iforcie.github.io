@@ -8,10 +8,15 @@ import AppBeansFilter from '../app-beans-filter/AppBeansFilter';
 import AppBeansCards from '../app-beans-cards/AppBeansCards';
 
 class AppBeansMain extends Component {
+
+	changePageType = (newPageType) => {
+		this.props.changePageType(newPageType);
+	}
+
 	render() {
 		return (
 			<>
-				<AppBeansHeader />
+				<AppBeansHeader changePageType={this.changePageType}/>
 				<AppBeansAbout />
 				<Container>
 					<div className="d-flex flex-column flex-md-row align-items-center justify-content-center my-5">

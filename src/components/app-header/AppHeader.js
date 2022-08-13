@@ -1,24 +1,18 @@
-import { Component } from 'react';
+import {Component} from 'react';
 
 import './appHeader.scss';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			status: 'house'
-		}
-	}
-
 	render() {
+		const {changePageType} = this.props;
 		return (
 			<header className="font-8">
 				<nav>
-					<ul className='navigation'>
-						<li>Coffee house</li>
-						<li>Our Coffee</li>
-						<li>For your pleasure</li>
-					</ul>
+					<div className='navigation'>
+						<button type="button" onClick={() => changePageType("coffeeHouse")} className="button_menu">Coffee house</button>
+						<button type="button" onClick={() => changePageType("ourCoffee")} className="button_menu">Our Coffee</button>
+						<button type="button" className="button_menu">For your pleasure</button>
+					</div>
 				</nav>
 			</header>
 		);
