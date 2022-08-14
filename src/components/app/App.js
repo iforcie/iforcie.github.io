@@ -3,6 +3,7 @@ import { Component } from 'react';
 // import AppHeader from '../app-header/AppHeader';
 import AppAboutMain from '../pages/app-about-us/app-about-main/AppAboutMain';
 import AppBeansMain from '../pages/app-about-beans/app-beans-main/AppBeansMain';
+import AppPleasureMain from '../pages/app-pleasure/app-pleasure-main/AppPleasureMain';
 import AppFooter from '../app-footer/AppFooter';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,6 +31,9 @@ class App extends Component {
         return <AppAboutMain changePageType={this.changePageType}/>
       } else if (pageType === 'ourCoffee') {
         return <AppBeansMain changePageType={this.changePageType}/>
+      } else if(pageType === 'pleasure') {
+        return <AppPleasureMain changePageType={this.changePageType}/>
+
       }
     }
 
