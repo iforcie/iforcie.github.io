@@ -69,19 +69,3 @@ input::-webkit-inner-spin-button {
 		font-weight: 700;
 	}
 }
-
-@media(max-width: 768px) {
-	#offcanvas-navbar-nav {
-		background-color: transparent;
-		backdrop-filter: blur(5px);
-	}
-	
-	.btn-close {
-		background-color: #fff;
-	}
-	
-	button.navbar-toggler {
-		margin: 10px 20px;
-		background-color: RGBA(255,255,255,0.35);
-	}
-}

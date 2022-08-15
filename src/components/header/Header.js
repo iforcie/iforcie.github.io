@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import {Navbar, Nav, Offcanvas} from 'react-bootstrap';
+import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
 
 import './header.scss';
 
@@ -18,11 +18,13 @@ class Header extends Component {
 							<Offcanvas.Title id="offcanvas-navbar-label-nav" className="text-white">Coffee House</Offcanvas.Title>
 						</Offcanvas.Header>
 						<Offcanvas.Body>
-							<Nav>
-								<Nav.Link onClick={() => changePageType("coffeeHouse")} className="button_menu text-white">Coffee house</Nav.Link>
-								<Nav.Link onClick={() => changePageType("ourCoffee")} className="button_menu text-white">Our Coffee</Nav.Link>
-								<Nav.Link onClick={() => changePageType("pleasure")} className="button_menu text-white">Four your pleasure</Nav.Link>
-							</Nav>
+							<Container>
+								<Nav>
+									<Nav.Link onClick={() => changePageType("coffeeHouse")} className="button_menu text-white">Coffee house</Nav.Link>
+									<Nav.Link onClick={() => changePageType("ourCoffee")} className="button_menu text-white">Our Coffee</Nav.Link>
+									<Nav.Link onClick={() => changePageType("pleasure")} className="button_menu text-white">Four your pleasure</Nav.Link>
+								</Nav>
+							</Container>
 						</Offcanvas.Body>
 					</Navbar.Offcanvas>
 				</Navbar>
