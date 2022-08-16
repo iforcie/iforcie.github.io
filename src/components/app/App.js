@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-// import AppHeader from '../app-header/AppHeader';
+import Header from '../header/Header';
 import AppAboutMain from '../../pages/app-about-us/app-about-main/AppAboutMain';
 import AppBeansMain from '../../pages/app-about-beans/app-beans-main/AppBeansMain';
 import AppPleasureMain from '../../pages/app-pleasure/app-pleasure-main/AppPleasureMain';
@@ -38,6 +38,7 @@ class App extends Component {
 
     return (
       <div className="app">
+        <Header changePageType={this.changePageType} pageType={this.state.pageType} />
         {app(this.state.pageType)}
         <Footer/>
       </div>
