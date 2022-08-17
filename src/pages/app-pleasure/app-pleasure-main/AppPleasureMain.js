@@ -5,10 +5,11 @@ import AppPleasureCards from '../app-pleasure-cards/AppPleasureCards';
 
 class AppPleasureMain extends Component {
 	render() {
+		const {data} = this.props;
 		return (
 			<>
 				<AppPleasureAbout />
-				<AppPleasureCards />
+				<AppPleasureCards data={data}/>
 			</>
 		)
 	}

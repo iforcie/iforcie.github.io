@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 import Header from '../header/Header';
 import AppAboutMain from '../../pages/app-about-us/app-about-main/AppAboutMain';
@@ -12,7 +13,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageType: 'coffeeHouse'
+      data: [
+        {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: uuidv4()},
+        {name: "AROMISTICO Coffee 1 kg", country: "Kenya", price: "6.99$", id: uuidv4()},
+        {name: "AROMISTICO Coffee 1 kg", country: "Columbia", price: "6.99$", id: uuidv4()},
+        {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: uuidv4()},
+        {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: uuidv4()},
+        {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "6.99$", id: uuidv4()}
+      ],
+      pageType: 'coffeeHouse',
+      filter: 'all',
+      search: ''
     }
   }
 
@@ -22,22 +33,61 @@ class App extends Component {
     })
   }
 
+  changeFilter = (newFilter) => {
+    this.setState({
+      filter: newFilter
+    })
+  }
+
+  updateSearch = (search) => {
+    this.setState({
+      search
+    });
+  }
+
+  searchCard = (items, search) => {
+		if(search.length === 0) return items;
+
+		return items.filter(item => item.country.indexOf(search) > -1);
+	}
+
+  filterCards = (item, filter) => {
+    switch(filter) {
+      case 'Brazil':
+        return item.filter(item => item.country === 'Brazil');
+      case 'Kenya':
+        return item.filter(item => item.country === 'Kenya');
+        case 'Columbia':
+          return item.filter(item => item.country === 'Columbia');
+      default:
+        return item;
+    }
+  }
   
   render() {
+
+    const {pageType, data, filter, search} = this.state;
     
     const app = (pageType) => {
       if (pageType === 'coffeeHouse') {
         return <AppAboutMain changePageType={this.changePageType}/>
       } else if (pageType === 'ourCoffee') {
-        return <AppBeansMain changePageType={this.changePageType}/>
+        return <AppBeansMain 
+                  data={this.filterCards(this.searchCard(data, search), filter)} 
+                  changePageType={this.changePageType} 
+                  changeFilter={this.changeFilter}
+                  updateSearch={this.updateSearch}/>
       } else if(pageType === 'pleasure') {
-        return <AppPleasureMain changePageType={this.changePageType}/>
+        return <AppPleasureMain 
+                  data={this.filterCards(data, filter)} 
+                  changePageType={this.changePageType} 
+                  changeFilter={this.changeFilter}/>
       }
     }
 
     return (
       <div className="app">
-        <Header changePageType={this.changePageType} pageType={this.state.pageType} />
+        <Header changePageType={this.changePageType} pageType={pageType} />
         {app(this.state.pageType)}
         <Footer/>
       </div>
