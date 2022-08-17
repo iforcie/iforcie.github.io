@@ -20,7 +20,6 @@ class App extends Component {
     this.setState({
       pageType: newPageType
     })
-    console.log(this.state.pageType);
   }
 
   
