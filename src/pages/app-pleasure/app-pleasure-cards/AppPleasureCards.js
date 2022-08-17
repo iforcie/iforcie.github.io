@@ -4,7 +4,7 @@ import aromistico from '../../../resources/images/cards/aromistico.png';
 
 const AppPleasureCards = () => {
 	return (
-		<Container className="mt-5kkkk">
+		<Container className="mt-5">
 			<Row className="d-flex flex-column flex-md-row justify-content-center align-items-center">
 				<Col xs={8} md={3} className="cart align-self-auto mb-3 mx-md-4" style={{boxShadow: "4px 4px 20px rgba(0, 0, 0, 0.25)", maxWidth: "220px", cursor: "pointer"}}>
 					<img src={aromistico} alt="solimo" />
