@@ -1,7 +1,8 @@
 import { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {v4 as uuidv4} from 'uuid';
 
-import Header from '../header/Header';
+import {Header} from '../header/Header';
 import AppAboutMain from '../../pages/app-about-us/app-about-main/AppAboutMain';
 import AppBeansMain from '../../pages/app-about-beans/app-beans-main/AppBeansMain';
 import AppPleasureMain from '../../pages/app-pleasure/app-pleasure-main/AppPleasureMain';
@@ -66,32 +67,34 @@ class App extends Component {
   
   render() {
 
-    const {pageType, data, filter, search} = this.state;
+    const {data, filter, search} = this.state;
+    // console.log(window.location.pathname);
+    console.log("qweqwe");
     
-    const app = (pageType) => {
-      if (pageType === 'coffeeHouse') {
-        return <AppAboutMain changePageType={this.changePageType}/>
-      } else if (pageType === 'ourCoffee') {
-        return <AppBeansMain 
-                  data={this.filterCards(this.searchCard(data, search), filter)} 
-                  changePageType={this.changePageType} 
-                  changeFilter={this.changeFilter}
-                  updateSearch={this.updateSearch}/>
-      } else if(pageType === 'pleasure') {
-        return <AppPleasureMain 
-                  data={this.filterCards(data, filter)} 
-                  changePageType={this.changePageType} 
-                  changeFilter={this.changeFilter}/>
-      }
-    }
-
     return (
       <div className="app">
-        <Header changePageType={this.changePageType} pageType={pageType} />
-        {app(this.state.pageType)}
-        <Footer/>
+        <Router>
+          <Header/>
+          <Switch>
+            <Route exact path="/">
+              <AppAboutMain />
+            </Route>
+            <Route path="/coffee">
+              <AppBeansMain 
+                data={this.filterCards(this.searchCard(data, search), filter)} 
+                changeFilter={this.changeFilter}
+                updateSearch={this.updateSearch}/>
+            </Route>
+            <Route path="/pleasure">
+              <AppPleasureMain 
+                data={this.filterCards(data, filter)} 
+                changeFilter={this.changeFilter}/>
+            </Route>
+          </Switch>
+        </Router>
+        <Footer />
       </div>
-    );
+    )
   }
 }
 
