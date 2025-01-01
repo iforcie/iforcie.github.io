@@ -44,7 +44,16 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.3",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.34",
+    "@types/uuid": "^10.0.0",
     "gh-pages": "^4.0.0",
+    "typed-scss-modules": "^8.0.1",
+    "typescript": "^5.7.2",
     "uuid": "^8.3.2"
   }
 }

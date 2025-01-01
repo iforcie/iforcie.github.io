@@ -1,0 +1,17 @@
+export declare const font1: string;
+export declare const font10: string;
+export declare const font11: string;
+export declare const font12: string;
+export declare const font13: string;
+export declare const font14: string;
+export declare const font15: string;
+export declare const font16: string;
+export declare const font17: string;
+export declare const font2: string;
+export declare const font3: string;
+export declare const font4: string;
+export declare const font5: string;
+export declare const font6: string;
+export declare const font7: string;
+export declare const font8: string;
+export declare const font9: string;
