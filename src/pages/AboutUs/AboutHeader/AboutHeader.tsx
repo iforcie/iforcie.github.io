@@ -1,12 +1,12 @@
 import { Container, Col } from 'react-bootstrap';
 
-import { HeaderStyle } from '../../../components/header/Header';
+import { Header } from '../../../components/Header/Header';
 
 const LOGO_SRC = '/static/icons/coffee-beans_white.png';
 
 export const AboutHeader = () => {
 	return (
-		<HeaderStyle>
+		<Header.Style>
 			<Container>
 				<Col>
 					<div style={{textAlign: "center", marginTop: "90pt"}}>
@@ -24,6 +24,6 @@ export const AboutHeader = () => {
 					</div>
 				</Col>
 			</Container>
-		</HeaderStyle>
+		</Header.Style>
 	)
 };

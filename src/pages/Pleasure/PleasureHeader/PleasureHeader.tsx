@@ -1,9 +1,9 @@
-import { HeaderStyle } from "../../../components/header/Header";
+import { Header } from "../../../components/Header/Header";
 
 export const PleasureHeader = () => {
 	return (
-		<HeaderStyle>
+		<Header.Style>
 			<h1 className="text-center" style={{padding: "30pt 0pt"}}>For your pleasure</h1>
-		</HeaderStyle>
+		</Header.Style>
 	)
 };

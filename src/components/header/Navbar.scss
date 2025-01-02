@@ -1,0 +1,51 @@
+.navigation {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	button {
+		margin-right: 40px;
+	}
+	.button_menu:nth-child(1)::before {
+		content: url('../../resources/icons/coffee-beans_black.svg');
+	}
+}
+
+@media (max-width: 768px) {
+  #offcanvas-navbar-nav {
+		background-color: transparent;
+		backdrop-filter: blur(5px);
+	}
+
+  button.navbar-toggler {
+		margin: 10px 20px;
+		background-color: RGBA(255,255,255,0.35);
+	}
+
+	button.btn-close {
+		background-color: #fff;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-nav {
+		align-items: flex-end;
+	}
+	.navbar {
+		background-color: rgba(0,0,0, 0.5);
+	}
+	.navbar-nav:nth-child(1) {
+		& a {
+			padding-left: 0px !important;
+		}
+		&::before {
+			content: url('../../resources/icons/coffee-beans-1.png');
+		}
+	}
+}
+
+.navbar-nav {
+	& a {
+		padding-right: 40px !important;
+		padding-bottom: 0px;
+	}
+}

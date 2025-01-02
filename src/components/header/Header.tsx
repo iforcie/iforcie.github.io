@@ -1,26 +1,10 @@
-import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Container, Navbar, Nav, Offcanvas } from 'react-bootstrap';
+
+import { HeaderStyle } from './HeaderStyle';
 
 import styles from './Header.module.scss';
-
-const ABOUT_PNG_SRC: string = '/static/images/backgrounds/desk-791178_1920.png';
-const OUR_COFFEE_SRC: string = '../resources/images/backgrounds/our-coffee.png';
-const PLEASURE_SRC: string = '../resources/images/backgrounds/pleasure_header.png';
-
-const backgroundUrl: Record<string, string> = {
-	'/': ABOUT_PNG_SRC,
-	'/coffee': OUR_COFFEE_SRC,
-	'/pleasure':PLEASURE_SRC
-};
-
-export const HeaderStyle = styled.div`
-	background: url('${backgroundUrl[window.location.pathname]}') 0 0 no-repeat;
-	background-size: cover;
-	padding-top: ${() => window.location.pathname === '/' ? "40pt" : "30pt"};
-	padding-bottom: ${() => window.location.pathname === '/' ? "150pt" : "0pt"};
-	color: #fff;
-`;
+import './Navbar.scss';
 
 export const Header = () => {
 	return (
@@ -48,3 +32,5 @@ export const Header = () => {
 		</header>
 	);
 };
+
+Header.Style = HeaderStyle;

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { AboutMain } from '../../pages/AboutUs/AboutMain';
 import { BeansMain } from '../../pages/AboutBeans/BeansMain';
 import { Footer } from '../Footer/Footer';
-import { Header } from '../header/Header';
+import { Header } from '../Header/Header';
 import { PleasureMain } from '../../pages/Pleasure/PleasureMain';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -62,7 +62,7 @@ const App = () => {
             <BeansMain data={DATA.data} />
           </Route>
           <Route path="/pleasure">
-            <PleasureMain data={filterCards(DATA, filter)} />
+            <PleasureMain data={DATA.data} />
           </Route>
         </Switch>
       </Router>
