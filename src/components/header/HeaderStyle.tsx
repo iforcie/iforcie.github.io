@@ -11,21 +11,19 @@ const OUR_COFFEE_SRC: string = '/static/images/backgrounds/our-coffee.png';
 const PLEASURE_SRC: string = '/static/images/backgrounds/pleasure_header.png';
 
 const backgroundUrl: Record<string, string> = {
-	'/': ABOUT_PNG_SRC,
-	'/coffee': OUR_COFFEE_SRC,
-	'/pleasure':PLEASURE_SRC
+  '/': ABOUT_PNG_SRC,
+  '/coffee': OUR_COFFEE_SRC,
+  '/pleasure': PLEASURE_SRC,
 };
 
 export const HeaderStyle = React.memo(({ children }: Props) => {
   const style: THeaderStyle = {
     background: `url('${backgroundUrl[window.location.pathname]}') 0 0 no-repeat`,
     backgroundSize: 'cover',
-    paddingTop: `${window.location.pathname === '/' ? "40pt" : "30pt"}`,
-    paddingBottom: `${window.location.pathname === '/' ? "150pt" : "0pt"}`,
+    paddingTop: `${window.location.pathname === '/' ? '40pt' : '30pt'}`,
+    paddingBottom: `${window.location.pathname === '/' ? '150pt' : '0pt'}`,
     color: '#fff',
   };
 
-  return (
-    <div style={style}>{children}</div>
-  );
+  return <div style={style}>{children}</div>;
 });

@@ -10,7 +10,7 @@ export const FilterController = ({ children }: Props) => {
   const [filter, setFilterState] = useState<FilterNames>('all');
   const [isActiveFilter, setIsActiveFilter] = useState<boolean>(false);
 
-  const setFilter = (newFilter: FilterNames) => {
+  const handleSetFilter = (newFilter: FilterNames) => {
     setFilterState(newFilter);
     setIsActiveFilter(newFilter !== 'all');
   };
@@ -22,7 +22,7 @@ export const FilterController = ({ children }: Props) => {
     [filter]
   );
 
-  const context = useMemo(() => ({ isActiveFilter, filterCards, filter, setFilter }), [filter]);
+  const context = useMemo(() => ({ isActiveFilter, filterCards, filter, setFilter: handleSetFilter }), [filter]);
 
   return <FilterContext.Provider value={context}>{children}</FilterContext.Provider>;
 };
