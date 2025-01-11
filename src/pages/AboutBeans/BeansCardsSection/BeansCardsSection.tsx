@@ -6,7 +6,7 @@ type Props = {
   data: any[];
 };
 
-export const PleasureCards = ({ data }: Props) => {
+export const BeansCardsSection = ({ data }: Props) => {
   const elements = data.map(item => {
     return (
       <Col
@@ -24,7 +24,7 @@ export const PleasureCards = ({ data }: Props) => {
   });
 
   return (
-    <Container className='mt-5'>
+    <Container>
       <Row className='d-flex flex-column flex-md-row justify-content-center align-items-center'>{elements}</Row>
     </Container>
   );

@@ -1,33 +1,33 @@
-import {Container} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 import { BeansAbout } from './BeansAbout/BeansAbout';
+import { BeansCardsSection } from './BeansCardsSection/BeansCardsSection';
+import { BeansFilters } from './BeansFilters/BeansFilters';
 import { BeansHeader } from './BeansHeader/BeansHeader';
 import { BeansSearch } from './BeansSearch/BeansSearch';
-import { BeansFilter } from './BeansFilter/BeansFilter';
-import { BeansCards } from './BeansCards/BeansCards';
+import { useFilter } from '../../hooks/useFilter';
 
 type Props = {
-	data: any[];
-}
+  data: any[];
+};
 
 export const BeansMain = ({ data }: Props) => {
-	// changeFilter = (newFilter) => {
-	// 	this.props.changeFilter(newFilter);
-	// }
+  const { filterCards, filter } = useFilter();
 
-	return (
-		<>
-			<BeansHeader />
-			<BeansAbout />
+  return (
+    <>
+      <BeansHeader />
+      <BeansAbout />
 
-			<Container>
-				<div className="d-flex flex-column flex-md-row align-items-center justify-content-center my-5">
-					<BeansSearch />
-					<span className="mx-4 my-3">Or filter</span>
-					<BeansFilter />
-				</div>
-			</Container>
-			<BeansCards data={data}/>
-		</>
-	);
-}
+      <Container>
+        <div className='d-flex flex-column flex-md-row align-items-center justify-content-center my-5'>
+          <BeansSearch />
+          <span className='mx-4 my-3'>Or filter</span>
+          <BeansFilters />
+        </div>
+      </Container>
+
+      <BeansCardsSection data={filterCards(data, filter)} />
+    </>
+  );
+};
