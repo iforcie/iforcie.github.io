@@ -6,10 +6,17 @@ import { DATA } from '../../data/data';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import { PleasureMain } from '../../pages/Pleasure/PleasureMain';
+import { useFilter } from '../../hooks/useFilter';
+import { useSearch } from '../../hooks/useSearch';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
+  const { filterCards, filter } = useFilter();
+  const { searchCard } = useSearch();
+
+  const filteredAndSearchedData = filterCards(searchCard(DATA), filter);
+
   return (
     <div className='app'>
       <Router>
@@ -20,10 +27,10 @@ const App = () => {
             <AboutMain />
           </Route>
           <Route path='/coffee'>
-            <BeansMain data={DATA.data} />
+            <BeansMain data={filteredAndSearchedData} />
           </Route>
           <Route path='/pleasure'>
-            <PleasureMain data={DATA.data} />
+            <PleasureMain data={DATA} />
           </Route>
         </Switch>
       </Router>

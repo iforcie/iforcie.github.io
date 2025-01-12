@@ -14,7 +14,7 @@ export const SearchController = ({ children }: Props) => {
 
   const searchCard = useCallback(
     (data: any[]) => {
-      return search.length === 0 ? data : data.filter(item => item.country.indexOf(search) > -1);
+      return search.length === 0 ? data : data.filter(item => item.country.indexOf(search) > -1 || item.name.indexOf(search) > -1);
     },
     [search]
   );

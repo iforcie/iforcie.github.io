@@ -5,19 +5,12 @@ import { BeansCardsSection } from './BeansCardsSection/BeansCardsSection';
 import { BeansFilters } from './BeansFilters/BeansFilters';
 import { BeansHeader } from './BeansHeader/BeansHeader';
 import { BeansSearch } from './BeansSearch/BeansSearch';
-import { useFilter } from '../../hooks/useFilter';
-import { useSearch } from '../../hooks/useSearch';
 
 type Props = {
   data: any[];
 };
 
 export const BeansMain = ({ data }: Props) => {
-  const { filterCards, filter } = useFilter();
-  const { searchCard } = useSearch();
-
-  const filteredAndSearchedData = filterCards(searchCard(data), filter);
-
   return (
     <>
       <BeansHeader />
@@ -31,7 +24,7 @@ export const BeansMain = ({ data }: Props) => {
         </div>
       </Container>
 
-      <BeansCardsSection data={filteredAndSearchedData} />
+      <BeansCardsSection data={data} />
     </>
   );
 };
