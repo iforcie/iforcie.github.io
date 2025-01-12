@@ -1,0 +1,35 @@
+header {
+	padding-top: 15pt;
+	margin-left: 70pt;
+}
+
+h1 {
+	font-size: 40px;
+}
+div  {
+	p {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 15pt;
+		&:nth-child(1) {
+			margin-top: 19pt;
+		}
+	}
+	.buttonMenu {
+		background-color: transparent;
+		border: 0px; 
+		cursor: pointer;
+		font-size: 14px;
+		padding: 5pt 35pt;
+		border-radius: 3px;
+	}
+	button {
+		background-color: transparent;
+		color: #fff;
+		cursor: pointer;
+		border: 1px solid #fff;
+		font-size: 14px;
+		padding: 5pt 35pt;
+		border-radius: 3px;
+	}
+}

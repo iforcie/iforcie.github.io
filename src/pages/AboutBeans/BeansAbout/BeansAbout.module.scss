@@ -1,0 +1,13 @@
+.beanBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 17pt;
+}
+.beanLine {
+  border: 1px solid #000;
+  width: 60px;
+  height: 1px;
+  justify-content: center;
+}
